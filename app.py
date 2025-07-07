@@ -15,8 +15,8 @@ class Note(db.Model):
     title: Mapped[str] = mapped_column(unique=True)
     description: Mapped[str]
 
-#with app.app_context():
-#    db.create_all()
+with app.app_context():
+    db.create_all()
 
 @app.route('/')
 def getallnotes():
